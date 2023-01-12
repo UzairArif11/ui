@@ -1,0 +1,133 @@
+<head>
+    <style>
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.2fr 1.5fr 1.5fr 1fr ;
+            grid-template-areas:
+                "nav nav nav nav"
+                "menu container2 container2 container2"
+                "menu  container2 container2 container2";
+            grid-gap: 0.2rem;
+            text-align: center;
+            background-color: white ;
+            margin: 1%;
+        }
+        #container2 {
+            border: 2px solid rgb(222, 216, 216);
+            grid-area: container2;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1.2fr 1.2fr ;
+            grid-template-areas:
+             " image1 text"
+                "image2 text";
+                grid-gap: 1.2rem;
+    text-align: center;
+    background-color: #f2f2f2;
+    /* margin: 1%; */
+    padding: 15px;
+        }
+        
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            grid-area: nav;
+            background-color: #f2f2f2;
+            border: 2px solid rgb(222, 216, 216);
+            
+        }
+
+        #menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            grid-area: menu;
+            background-color: #f2f2f2;
+            border: 2px solid rgb(222, 216, 216);
+        }
+
+        #container2 #image1 {
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            grid-area: image1;
+            background-color: white;
+            border: 2px solid rgb(222, 216, 216);
+        }
+
+        #container2 #image2 {
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            grid-area: image2;
+            background-color: white;
+            border: 2px solid rgb(222, 216, 216);
+        }
+
+        #container2 #text {
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            grid-area: text;
+            background-color: white;
+            border: 2px solid rgb(222, 216, 216);
+        }
+
+        @media only screen and (max-width: 550px) {
+            .container {
+                grid-template-columns: 1.2fr;
+                grid-template-rows: 0.4fr 0.4fr 1.2fr 1.2fr;
+                grid-template-areas:
+                    "nav"
+                    "menu"
+                    "container2" 
+                    "container2" ;
+            }
+
+            #container2 #image1 {
+                display:none;
+            }
+            #container2 {
+                padding: 0px;
+                padding-bottom: 14px;
+             border: 0px;  
+            grid-area: container2;
+            display: grid;
+            grid-template-columns: 1fr  ;
+            grid-template-rows: 1.2fr 1.2fr  ;
+            grid-template-areas:
+             " text"
+            "image2 ";
+            grid-gap: 0.2rem;
+            
+            text-align: center;
+            background-color:white;
+            margin: 0%;
+        }
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>Navbar</nav>
+        <div id="menu" ><p >menu</p></div>
+        <div id="container2">    
+            <div id="image1"><p> image1 </p></div>
+            <div id="image2"><p> image2 </p></div>
+            <div id="text"><p> text </p> </div>
+        </div>
+    </div>
+</body>
+
+</html>
